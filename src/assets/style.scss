@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #37373e;
+  color: #fff;
+}
+
+.page-container {
+  @apply max-w-2xl mx-auto overflow-x-auto shadow-md sm:rounded-lg;
+}
+/*
+  Form styles
+*/
+.button-primary {
+  @apply cursor-pointer bg-blue-600 hover:bg-blue-500 shadow-xl px-5 py-2 inline-block text-blue-100 hover:text-white rounded;
+}
+
+.button-danger {
+  @apply cursor-pointer bg-red-600 hover:bg-red-500 shadow-xl px-5 py-2 inline-block text-orange-100 hover:text-white rounded;
+}
+
+.button-editUser {
+  @apply font-medium text-blue-600 dark:text-blue-500 hover:underline;
+}
+
+.error-msg {
+  @apply text-red-600;
+}
+
+.form-textInput {
+  @apply h-full w-full rounded-[7px] border border-blue-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal outline outline-0;
+}
+
+.router-view {
+  @apply p-4;
+}
+
+/*
+  Table
+*/
+.table-users {
+  @apply w-full text-sm text-left text-gray-500 dark:text-gray-400;
+
+  .table-header {
+    @apply text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400;
+  }
+  .table-row {
+    @apply bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600;
+  }
+
+  .table-col {
+    @apply px-6 py-3;
+  }
+
+  .table-userName {
+    @apply px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap;
+  }
+}
